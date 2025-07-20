@@ -14,12 +14,12 @@ class BookDetails(models.Model):
     title = fields.Char(required=True, tracking=True)
     is_featured = fields.Boolean(string="Featured", default=False)
 
-    product_id = fields.Many2one(
-        'product.product',
-        string='Related Product',
-        domain=[('detailed_type', '=', 'product')],
-        required=True
-    )
+    # product_id = fields.Many2one(
+    #     'product.product',
+    #     string='Related Product',
+    #     domain=[('detailed_type', '=', 'product')],
+    #     required=True
+    # )
 
     author_id = fields.Many2one(
         'res.partner',
